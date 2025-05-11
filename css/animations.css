@@ -1,0 +1,274 @@
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn var(--transition) ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp var(--transition) ease forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft var(--transition) ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight var(--transition) ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-spin {
+  animation: spin 2s linear infinite;
+}
+
+/* Apply animations with delay */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
+
+.delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Hover animations */
+.hover-lift {
+  transition: transform var(--transition-fast) ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.hover-scale {
+  transition: transform var(--transition-fast) ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-rotate {
+  transition: transform var(--transition-fast) ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(5deg);
+}
+
+/* Shimmer loading effect */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-neutral-100) 0%,
+    var(--color-neutral-200) 50%,
+    var(--color-neutral-100) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Applied animations for specific elements */
+.hero h1 {
+  animation: slideUp var(--transition) ease forwards;
+  animation-delay: 300ms;
+}
+
+.hero-description {
+  animation: slideUp var(--transition) ease forwards;
+  animation-delay: 500ms;
+}
+
+.cta-buttons {
+  animation: slideUp var(--transition) ease forwards;
+  animation-delay: 700ms;
+}
+
+.feature-image img {
+  animation: float 4s ease-in-out infinite;
+}
+
+.logos-container {
+  animation: fadeIn var(--transition-slow) ease forwards;
+}
+
+.feature-section:nth-child(odd) .feature-content {
+  animation: slideInLeft var(--transition) ease forwards;
+  animation-delay: 200ms;
+}
+
+.feature-section:nth-child(even) .feature-content {
+  animation: slideInRight var(--transition) ease forwards;
+  animation-delay: 200ms;
+}
+
+.feature-card, .blog-card, .team-member {
+  transition: transform var(--transition) ease, box-shadow var(--transition) ease;
+}
+
+.feature-card:hover, .blog-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Animate section headers when they come into view */
+.section-header {
+  opacity: 1;
+}
+
+.section-header.visible {
+  animation: slideUp var(--transition) ease forwards;
+}
+
+/* Stagger animations for grid items */
+.features-grid .feature-card:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.features-grid .feature-card:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.features-grid .feature-card:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.features-grid .feature-card:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.features-grid .feature-card:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.features-grid .feature-card:nth-child(6) {
+  animation-delay: 600ms;
+}
+
+/* Button hover effects */
+.btn-primary, .btn-secondary, .btn-accent {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::after, .btn-secondary::after, .btn-accent::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-primary:hover::after, .btn-secondary:hover::after, .btn-accent:hover::after {
+  left: 100%;
+}

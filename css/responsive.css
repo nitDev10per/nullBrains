@@ -1,0 +1,234 @@
+/* Responsive styles */
+
+/* Small devices (landscape phones) */
+@media screen and (max-width: 768px) {
+  /* Typography responsive adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* Header & navigation */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--color-background);
+    box-shadow: var(--shadow-lg);
+    padding: 80px var(--space-6) var(--space-6);
+    transition: right var(--transition) ease;
+    z-index: var(--z-drawer);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .auth-buttons {
+    display: none;
+  }
+
+  /* Nav links inside the mobile menu */
+  .nav-links .auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+  }
+
+  /* Hero section */
+  .hero {
+    padding: var(--space-20) 0 var(--space-16);
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 300px;
+    margin: var(--space-6) auto 0;
+  }
+
+  /* Feature sections */
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .feature-image {
+    order: -1;
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .feature-section.reverse .feature-grid {
+    direction: ltr;
+  }
+
+  .feature-section.reverse .feature-image {
+    order: -1;
+  }
+
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  /* Team grid */
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6) var(--space-4);
+  }
+
+  /* Blog grid */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Newsletter */
+  .newsletter-form {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: center;
+  }
+}
+
+/* Medium devices (tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Features grid */
+  .features-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Team grid */
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Blog grid */
+  .blog-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* Small laptops */
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Large laptops and desktops */
+@media screen and (min-width: 1281px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+/* Extra small devices (phones) */
+@media screen and (max-width: 480px) {
+  /* Typography responsive adjustments */
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: var(--space-12) 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-8);
+  }
+
+  /* Logo sizing */
+  .logos-container {
+    gap: var(--space-4);
+  }
+
+  .logo-item {
+    height: 24px;
+  }
+
+  /* Team grid - single column on very small screens */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Back to top button */
+  .back-to-top {
+    right: 15px;
+    bottom: 15px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Adjust padding for the header when it's fixed */
+@media screen and (max-width: 768px) {
+  #header .container {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background-color: white;
+    color: black;
+  }
+
+  #header, #footer, .back-to-top, .newsletter-section {
+    display: none;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+}
