@@ -141,7 +141,7 @@ nav {
   overflow: hidden;
 }
 
-.hero::before {
+/* .hero::before {
   content: '';
   position: absolute;
   top: -200px;
@@ -152,9 +152,9 @@ nav {
   background: radial-gradient(circle, var(--color-primary-100), transparent 70%);
   z-index: var(--z-negative);
   opacity: 0.5;
-}
+} */
 
-.hero::after {
+/* .hero::after {
   content: '';
   position: absolute;
   bottom: -100px;
@@ -165,7 +165,7 @@ nav {
   background: radial-gradient(circle, var(--color-accent-100), transparent 70%);
   z-index: var(--z-negative);
   opacity: 0.4;
-}
+} */
 
 .hero-content {
   max-width: 800px;
@@ -184,7 +184,7 @@ nav {
 /* Trusted By Section */
 .trusted-by {
   padding: var(--space-12) 0;
-  background-color: var(--color-surface);
+  /* background-color: var(--color-surface); */
 }
 
 .logos-container {
