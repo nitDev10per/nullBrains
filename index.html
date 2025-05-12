@@ -36,7 +36,7 @@
                     <li><a href="" class="active">Home</a></li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Blog</a></li>
-                    <li><a href="#" id="openModalBtn">Contact</a></li>
+                    <li><a href="#" class="openModalBtn">Contact</a></li>
                     <li><a href="" class="search-toggle"><i class="fas fa-search"></i></a></li>
                 </ul>
                 <div class="auth-buttons">
@@ -56,7 +56,7 @@
                 <li><a href="" class="active">Home</a></li>
                 <li><a href="">Features</a></li>
                 <li><a href="">Blog</a></li>
-                <li><a href="#" id="openModalBtn">Contact</a></li>
+                <li><a href="#" class="openModalBtn">Contact</a></li>
                 <li><a href="#">Search</a></li>
                 <!-- <li><a href="" class="search-toggle"><i class="fas fa-search"></i></a></li> -->
             </ul>
@@ -442,10 +442,16 @@
 
     // Modal open/close
     const modal = document.getElementById("contactModal");
-    const openBtn = document.getElementById("openModalBtn");
+    const openBtn = document.getElementsByClassName("openModalBtn")[0];
+    const openBtn2 = document.getElementsByClassName("openModalBtn")[1];
     const closeBtn = document.getElementById("closeModalBtn");
 
     openBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        modal.style.display = "block";
+    });
+
+    openBtn2.addEventListener("click", function (e) {
         e.preventDefault();
         modal.style.display = "block";
     });
