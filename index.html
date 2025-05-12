@@ -43,21 +43,43 @@
                     <a href="#" class="btn btn-text">Sign In</a>
                     <a href="#" class="btn btn-primary">Register</a>
                 </div>
+                <i class="fas fa-bars" id="menu-icon" ></i>
+
             </nav>
         </div>
     </header>
+
+    <!-- Modal -->
+    <div class="modal menu" id="menu-modal">
+        <div class="modal-content menu">
+            <ul class="nav-links menu" id="nav-links">
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="#" id="openModalBtn">Contact</a></li>
+                <li><a href="#">Search</a></li>
+                <!-- <li><a href="" class="search-toggle"><i class="fas fa-search"></i></a></li> -->
+            </ul>
+            <div class="auth-buttons menu">
+                <a href="#" class="btn btn-text">Sign In</a>
+                <a href="#" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+    </div>
 
     <main>
         <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <h1 >Start Crafting Your <br/> <span class="highlight">Next Great Idea</span></h1>
+                    <h1>Start Crafting Your <br /> <span class="highlight">Next Great Idea</span></h1>
                     <p class="hero-description">Simplifying the creation of exciting apps, blog posts, application pages
                         and so much more!</p>
                     <div class="cta-buttons">
                         <a href="#" class="btn btn-primary weight-600" style="overflow: visible;">
                             Purchase Now
-                            <span class="tag green" style="padding: 2px 5px; right: -10px; font-weight: 100; font-size: 10px;">Only $15/mo</span>
+                            <span class="tag green"
+                                style="padding: 2px 5px; right: -10px; font-weight: 100; font-size: 10px;">Only
+                                $15/mo</span>
                         </a>
                         <a href="#" class="btn btn-text color-light">Learn More</a>
                     </div>
@@ -105,7 +127,7 @@
                             </li>
                         </ul>
                     </div>
-                   
+
                 </div>
             </div>
         </section>
@@ -134,7 +156,7 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
         </section>
@@ -193,7 +215,7 @@
         </section>
 
         <section id="team" class="team-section" style="position: relative;">
-            <div class="container" >
+            <div class="container">
                 <div class="header-decoration"></div>
                 <div class="section-header with-decoration">
                     <span class="section-label ">OUR TEAM</span>
@@ -220,10 +242,10 @@
                             <div class="member-image-box purple"></div>
                             <div class="member-image purple">
                                 <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                alt="Carl Jones">
+                                    alt="Carl Jones">
                             </div>
                         </div>
-                        
+
                         <h3>Carl Jones</h3>
                         <p>CTO and Co-founder</p>
                         <div class="social-links">
@@ -236,7 +258,7 @@
                             <div class="member-image-box green"></div>
                             <div class="member-image green">
                                 <img src="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                alt="Susan Peterson">
+                                    alt="Susan Peterson">
                             </div>
                         </div>
 
@@ -252,7 +274,7 @@
                             <div class="member-image-box blue"></div>
                             <div class="member-image blue">
                                 <img src="https://images.pexels.com/photos/3779760/pexels-photo-3779760.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-                                alt="Tommy Barnes">
+                                    alt="Tommy Barnes">
                             </div>
                         </div>
                         <h3>Tommy Barnes</h3>
@@ -316,7 +338,8 @@
                         <div class="blog-content">
                             <span class="tag blue">Design</span>
                             <h3>Best Workstations of the Year</h3>
-                            <p>Check out these inspiring workstations to get ideas on how to level-up your workstation.</p>
+                            <p>Check out these inspiring workstations to get ideas on how to level-up your workstation.
+                            </p>
                         </div>
                     </div>
                     <div class="blog-card">
@@ -327,7 +350,8 @@
                         <div class="blog-content">
                             <span class="tag yellow">Health</span>
                             <h3>Eating for Productivity</h3>
-                            <p>Learn how to be more disciplined in your diet and how you can eat to maximize productivity.
+                            <p>Learn how to be more disciplined in your diet and how you can eat to maximize
+                                productivity.
 
                             </p>
                         </div>
@@ -340,7 +364,8 @@
                         <div class="blog-content  ">
                             <span class="tag green">Gaming</span>
                             <h3>A Design Mind-set</h3>
-                            <p>What does it mean to have a design mind-set? Learn how to improve your eye for design.</p>
+                            <p>What does it mean to have a design mind-set? Learn how to improve your eye for design.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -375,82 +400,99 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-     <!-- Modal -->
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModalBtn">&times;</span>
-      <h2>Contact Us</h2>
-      <form id="contactForm">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Your name...">
+    <!-- Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name...">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Your email...">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email...">
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write something..." rows="5"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something..." rows="5"></textarea>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
-  </div>
-      
+
 </body>
 
 <script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.getElementById("menu-icon");
+    const menuModal = document.getElementById("menu-modal");
+
+    menuIcon.addEventListener("click", () => {
+      menuModal.style.display = "flex";
+    });
+
+    // Outside click to close
+    window.addEventListener("click", (e) => {
+      if (e.target === menuModal) {
+        menuModal.style.display = "none";
+      }
+    });
+  });
+
+
     // Modal open/close
     const modal = document.getElementById("contactModal");
     const openBtn = document.getElementById("openModalBtn");
     const closeBtn = document.getElementById("closeModalBtn");
 
     openBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      modal.style.display = "block";
+        e.preventDefault();
+        modal.style.display = "block";
     });
 
     closeBtn.addEventListener("click", function () {
-      modal.style.display = "none";
+        modal.style.display = "none";
     });
 
     window.addEventListener("click", function (e) {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
     });
 
     // Form validation
     document.addEventListener("DOMContentLoaded", () => {
-      const form = document.getElementById("contactForm");
+        const form = document.getElementById("contactForm");
 
-      form.addEventListener("submit", function (e) {
-        const name = form.querySelector("[name='name']");
-        const email = form.querySelector("[name='email']");
-        const message = form.querySelector("[name='message']");
+        form.addEventListener("submit", function (e) {
+            const name = form.querySelector("[name='name']");
+            const email = form.querySelector("[name='email']");
+            const message = form.querySelector("[name='message']");
 
-        let valid = true;
-        let errors = [];
+            let valid = true;
+            let errors = [];
 
-        if (!name || name.value.trim() === "") {
-          valid = false;
-          errors.push("Name is required.");
-        }
+            if (!name || name.value.trim() === "") {
+                valid = false;
+                errors.push("Name is required.");
+            }
 
-        if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
-          valid = false;
-          errors.push("Valid email is required.");
-        }
+            if (!email || !/\S+@\S+\.\S+/.test(email.value)) {
+                valid = false;
+                errors.push("Valid email is required.");
+            }
 
-        if (!message || message.value.trim().length < 10) {
-          valid = false;
-          errors.push("Message should be at least 10 characters.");
-        }
+            if (!message || message.value.trim().length < 10) {
+                valid = false;
+                errors.push("Message should be at least 10 characters.");
+            }
 
-        if (!valid) {
-          e.preventDefault();
-          alert(errors.join("\n"));
-        }
-      });
+            if (!valid) {
+                e.preventDefault();
+                alert(errors.join("\n"));
+            }
+        });
     });
-  </script>
+</script>
 
 </html>
